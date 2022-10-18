@@ -2,8 +2,6 @@ import streamlit as st
 import pandas as pd
 from PIL import Image
 
-st.title('연구결과')
-
 with st.sidebar :
     gubun = st.radio("열람하고 싶은 결과를 선택하세요.", ("강력범죄간 상관관계", "토지 및 인구 관련 요인", "주민 유형", "치안 관련 요인", "건물 유형"))
 
