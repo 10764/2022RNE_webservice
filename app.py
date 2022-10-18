@@ -7,11 +7,10 @@ with st.sidebar :
 
 if gubun == "강력범죄간 상관관계" :
     st.title("강력범죄간 상관관계")
-    t1, t2, t3 = st.tabs(["공시지가", "인구", "행정구역 면적"])
 
 elif gubun == "토지 및 인구 관련 요인" :
     st.title("토지 및 인구 관련 요인")
-    st.write("둠치기박치기2")
+    t1, t2, t3 = st.tabs(["공시지가", "인구", "행정구역 면적"])
 
 elif gubun == "주민 유형" :
     st.title("주민 유형")
