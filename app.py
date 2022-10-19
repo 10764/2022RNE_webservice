@@ -4,6 +4,9 @@ from PIL import Image
 
 with st.sidebar :
     gubun = st.selectbox("열람하고 싶은 결과를 선택하세요.", ("강력범죄간 상관관계", "토지 및 인구 관련 요인", "주민 유형", "치안 관련 요인", "건물 유형"))
+    with st.spinner("Loading..."):
+        time.sleep(5)
+    st.success("Done!")
 
 if gubun == "강력범죄간 상관관계" :
     st.title("강력범죄간 상관관계")
