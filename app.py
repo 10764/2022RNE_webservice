@@ -14,6 +14,12 @@ if gubun == "강력범죄간 상관관계" :
         st.dataframe(data, use_container_width = st.session_state.use_container_width)
         image = Image.open('범죄간상관관계사진.png')
         st.image(image, caption = '강력범죄간 상관관계')
+    with t2 :
+        data = pd.read_csv('범죄율간상관관계.csv', encoding = 'cp949')
+        st.checkbox("확장해서 보기", value = False, key = "use_container_width")
+        st.dataframe(data, use_container_width = st.session_state.use_container_width)
+        image = Image.open('범죄율간상관관계사진.png')
+        st.image(image, caption = '강력범죄의 범죄율간 상관관계')
 
 elif gubun == "토지 및 인구 관련 요인" :
     st.title("토지 및 인구 관련 요인")
