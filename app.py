@@ -67,6 +67,7 @@ elif gubun == "토지 및 인구 관련 요인" :
 elif gubun == "주민 유형" :
     st.title("주민 유형")
     t1, t2, t3 = st.tabs(["연령구간별 인구수", "세대당 인구", "기초생활수급자 수"])
+    with t1 : st.write('미완')
     with t2 :
         st.subheader('세대당 인구')
         data = pd.read_csv('세대당인구.csv', encoding = 'cp949')
