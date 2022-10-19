@@ -7,7 +7,7 @@ with st.sidebar :
 
 if gubun == "강력범죄간 상관관계" :
     st.title("강력범죄간 상관관계")
-    t1, t2 = st.tabs(["범죄 수", "범죄율"])
+    t1, t2 = st.tabs(["범d죄 수", "범죄율"])
 
 elif gubun == "토지 및 인구 관련 요인" :
     st.title("토지 및 인구 관련 요인")
