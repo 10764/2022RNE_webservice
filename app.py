@@ -9,9 +9,9 @@ if gubun == "강력범죄간 상관관계" :
     st.title("강력범죄간 상관관계")
     t1, t2 = st.tabs(["범죄 수", "범죄율"])
     with t1 :
-        data = pd.read_csv('범죄간상관관계.csv')
+        data = pd.read_csv('Mangnyangnyang/RNE_sample/범죄간상관관계.csv')
         st.dataframe(data)
-        image = Image.open('범죄간상관관계사진.png')
+        image = Image.open('Mangnyangnyang/RNE_sample/범죄간상관관계사진.png')
         st.image(image, caption = '강력범죄간 상관관계')
 
 elif gubun == "토지 및 인구 관련 요인" :
