@@ -10,7 +10,8 @@ if gubun == "강력범죄간 상관관계" :
     t1, t2 = st.tabs(["범죄 수", "범죄율"])
     with t1 :
         data = pd.read_csv('범죄간상관관계.csv', encoding = 'cp949')
-        st.dataframe(data.style.highlight_max(axis = 0))
+        st.checkbox("Use container width", value = False, key = "use_container_width")
+        st.dataframe(data, use_container_width = st.session_state.use_container_width)
         image = Image.open('범죄간상관관계사진.png')
         st.image(image, caption = '강력범죄간 상관관계')
 
