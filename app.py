@@ -30,14 +30,12 @@ elif gubun == "토지 및 인구 관련 요인" :
         st.dataframe(data, use_container_width = True)
         image = Image.open('평균공시지가사진.png')
         st.image(image, caption = '평균 공시지가')
-    with t2 :
-
     with t3 :
-        st.subheader('평균 공시지가')
-        data = pd.read_csv('평균공시지가.csv', encoding = 'cp949')
+        st.subheader('행정구역 면적')
+        data = pd.read_csv('행정구역 면적.csv', encoding = 'cp949')
         st.dataframe(data, use_container_width = True)
-        image = Image.open('평균공시지가사진.png')
-        st.image(image, caption = '평균 공시지가')
+        image = Image.open('행정구역면적사진.png')
+        st.image(image, caption = '행정구역 면적')
 
 
 elif gubun == "주민 유형" :
