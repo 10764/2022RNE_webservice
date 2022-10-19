@@ -4,8 +4,6 @@ from PIL import Image
 
 with st.sidebar :
     gubun = st.selectbox("열람하고 싶은 결과를 선택하세요.", ("강력범죄간 상관관계", "토지 및 인구 관련 요인", "주민 유형", "치안 관련 요인", "건물 유형"))
-    st.write("공공데이터를 활용한 머신러닝 기반 범죄 영
-    향 요인 분석 : 5대 강력범죄를 중심으로")
 
 if gubun == "강력범죄간 상관관계" :
     st.title("강력범죄간 상관관계")
@@ -26,6 +24,21 @@ if gubun == "강력범죄간 상관관계" :
 elif gubun == "토지 및 인구 관련 요인" :
     st.title("토지 및 인구 관련 요인")
     t1, t2, t3 = st.tabs(["공시지가", "인구", "행정구역 면적"])
+    with t1 :
+        st.subheader('평균 공시지가')
+        data = pd.read_csv('평균공시지가.csv', encoding = 'cp949')
+        st.dataframe(data, use_container_width = True)
+        image = Image.open('평균공시지가사진.png')
+        st.image(image, caption = '평균 공시지가')
+    with t2 :
+
+    with t3 :
+        st.subheader('평균 공시지가')
+        data = pd.read_csv('평균공시지가.csv', encoding = 'cp949')
+        st.dataframe(data, use_container_width = True)
+        image = Image.open('평균공시지가사진.png')
+        st.image(image, caption = '평균 공시지가')
+
 
 elif gubun == "주민 유형" :
     st.title("주민 유형")
@@ -70,3 +83,63 @@ elif gubun == "치안 관련 요인" :
 else :
     st.title("건물 유형")
     t1, t2, t3, t4 = st.tabs(["유치원", "학교", "학원", "유흥주점"])
+    with t1 :
+        st.subheader('유치원 수')
+        data = pd.read_csv('유치원.csv', encoding = 'cp949')
+        st.dataframe(data, use_container_width = True)
+        image = Image.open('유치원사진.png')
+        st.image(image, caption = '유치원 수')
+        st.subheader('유치원 비율')
+        data = pd.read_csv('유치원비율.csv', encoding = 'cp949')
+        st.dataframe(data, use_container_width = True)
+        image = Image.open('유치원비율사진.png')
+        st.image(image, caption = '유치원 비율')
+    with t2 :
+        st.subheader('초·중·고등학교 수')
+        data = pd.read_csv('초중고.csv', encoding = 'cp949')
+        st.dataframe(data, use_container_width = True)
+        image = Image.open('초중고사진.png')
+        st.image(image, caption = '초·중·고등학교 수')
+        st.subheader('초·중·고등학교 비율')
+        data = pd.read_csv('초중고비율.csv', encoding = 'cp949')
+        st.dataframe(data, use_container_width = True)
+        image = Image.open('초중고비율사진.png')
+        st.image(image, caption = '초·중·고등학교 비율')
+        st.subheader('대학교 수')
+        data = pd.read_csv('대학교.csv', encoding = 'cp949')
+        st.dataframe(data, use_container_width = True)
+        image = Image.open('대학교사진.png')
+        st.image(image, caption = '대학교 수')
+        st.subheader('대학교 비율')
+        data = pd.read_csv('대학교비율.csv', encoding = 'cp949')
+        st.dataframe(data, use_container_width = True)
+        image = Image.open('대학교비율사진.png')
+        st.image(image, caption = '대학교 비율')
+    with t3 :
+        st.subheader('학원 수')
+        data = pd.read_csv('학원.csv', encoding = 'cp949')
+        st.dataframe(data, use_container_width = True)
+        image = Image.open('학원사진.png')
+        st.image(image, caption = '학원 수')
+        st.subheader('단위면적당 학원 비율')
+        data = pd.read_csv('학원비율(면적).csv', encoding = 'cp949')
+        st.dataframe(data, use_container_width = True)
+        image = Image.open('학원비율(면적)사진.png')
+        st.image(image, caption = '단위면적당 학원 비율')
+        st.subheader('단위인구당 학원 비율')
+        data = pd.read_csv('학원비율(인구).csv', encoding = 'cp949')
+        st.dataframe(data, use_container_width = True)
+        image = Image.open('학원비율(인구)사진.png')
+        st.image(image, caption = '단위인구당 학원 비율')
+    with t4 :
+        st.subheader('유흥주점 수')
+        data = pd.read_csv('유흥주점.csv', encoding = 'cp949')
+        st.dataframe(data, use_container_width = True)
+        image = Image.open('유흥주점사진.png')
+        st.image(image, caption = '유흥주점 수')
+        st.subheader('유흥주점 비율')
+        data = pd.read_csv('유흥주점비율.csv', encoding = 'cp949')
+        st.dataframe(data, use_container_width = True)
+        image = Image.open('유흥주점비율사진.png')
+        st.image(image, caption = '유흥주점 비율')
+
