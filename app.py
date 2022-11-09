@@ -185,7 +185,7 @@ elif gubun == "주민 유형" :
         st.image(image, caption = '세대당 인구')
     with t3 :
         st.subheader('기초생활수급자 수')
-        data = pd.read_csv('기초생활수급자수.csv', encoding = 'UTF-8')
+        data = pd.read_csv('기초생활수급자수.csv', encoding = 'cp949')
         st.dataframe(data, use_container_width = True)
         image = Image.open('기초생활수급자수사진.png')
         st.image(image, caption = '기초생활수급자 수')
