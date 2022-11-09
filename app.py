@@ -73,7 +73,7 @@ elif gubun == "주민 유형" :
         image = Image.open('0~9세사진.png')
         st.image(image, caption = '0~9세')
         st.subheader('0~9세 비율')
-        data = pd.read_csv('0~9세비율.csv', encoding = 'cp949')
+        data = pd.read_csv('0~9세비율.csv', encoding = 'UTF-8')
         st.dataframe(data, use_container_width = True)
         image = Image.open('0~9세비율사진.png')
         st.image(image, caption = '0~9세 비율')
