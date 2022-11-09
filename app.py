@@ -10,13 +10,13 @@ if gubun == "강력범죄간 상관관계" :
     t1, t2 = st.tabs(["범죄 수", "범죄율"])
     with t1 :
         st.subheader('범죄 수')
-        data = pd.read_csv('범죄간상관관계.csv', encoding = 'UTF-8')
+        data = pd.read_csv('범죄간상관관계.csv', encoding = 'cp949')
         st.dataframe(data, use_container_width = True)
         image = Image.open('범죄간상관관계사진.png')
         st.image(image, caption = '강력범죄간 상관관계')
     with t2 :
         st.subheader('범죄율')
-        data = pd.read_csv('범죄율간상관관계.csv', encoding = 'UTF-8')
+        data = pd.read_csv('범죄율간상관관계.csv', encoding = 'cp949')
         st.dataframe(data, use_container_width = True)
         image = Image.open('범죄율간상관관계사진.png')
         st.image(image, caption = '강력범죄의 범죄율간 상관관계')
@@ -26,7 +26,7 @@ elif gubun == "토지 및 인구 관련 요인" :
     t1, t2, t3 = st.tabs(["공시지가", "인구", "행정구역 면적"])
     with t1 :
         st.subheader('평균 공시지가')
-        data = pd.read_csv('평균공시지가.csv', encoding = 'UTF-8')
+        data = pd.read_csv('평균공시지가.csv', encoding = 'cp949')
         st.dataframe(data, use_container_width = True)
         image = Image.open('평균공시지가사진.png')
         st.image(image, caption = '평균 공시지가')
