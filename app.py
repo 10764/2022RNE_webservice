@@ -179,7 +179,7 @@ elif gubun == "주민 유형" :
         st.image(image, caption = '100세 이상 비율')
     with t2 :
         st.subheader('세대당 인구')
-        data = pd.read_csv('세대당인구.csv', encoding = 'UTF-8')
+        data = pd.read_csv('세대당인구.csv', encoding = 'cp949')
         st.dataframe(data, use_container_width = True)
         image = Image.open('세대당인구사진.png')
         st.image(image, caption = '세대당 인구')
