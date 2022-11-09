@@ -68,7 +68,7 @@ elif gubun == "주민 유형" :
     t1, t2, t3 = st.tabs(["연령구간별 인구수", "세대당 인구", "기초생활수급자 수"])
     with t1 : 
         st.subheader('0~9세')
-        data = pd.read_csv('0~9세.csv', encoding = 'UTF-8')
+        data = pd.read_csv('0~9세.csv', encoding = 'cp949')
         st.dataframe(data, use_container_width = True)
         image = Image.open('0~9세사진.png')
         st.image(image, caption = '0~9세')
