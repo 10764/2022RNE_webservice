@@ -58,7 +58,7 @@ elif gubun == "토지 및 인구 관련 요인" :
         st.image(image, caption = '도시지역 인구 비율')
     with t3 :
         st.subheader('행정구역 면적')
-        data = pd.read_csv('행정구역 면적.csv', encoding = 'UTF-8')
+        data = pd.read_csv('행정구역 면적.csv', encoding = 'cp949')
         st.dataframe(data, use_container_width = True)
         image = Image.open('행정구역면적사진.png')
         st.image(image, caption = '행정구역 면적')
